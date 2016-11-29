@@ -1,13 +1,24 @@
 import pygame
 pygame.init();
+#alsdfj
+class Block(pygame.sprite.Sprite):
 
-#position vars
-x_pos = 0
-y_pos = 0
-x_delta = 0
-y_delta = 0
-clock = pygame.time.Clock()
+class Ball(pygame.sprite.Sprite):
 
+def main():
+    ball_img = pyglet.resource.image('ball.png')
+    paddle_imgs = [pyglet.resource.image('paddle1.png'),
+                   pyglet.resource.image('paddle2.png')]
+    wall_imgs = [pyglet.resource.image('vertical_wall.png'),
+                 pyglet.resource.image('horizontal_wall.png'),
+                 pyglet.resource.image('brick.png')]
+    window = GameWindow(ball_img,paddle_imgs, wall_imgs)
+    pyglet.app.run()
+main()
+
+# Size of break-out blocks
+block_width = 22
+block_height =13
 
 white = (255,255,255)
 black = (0,0,0)
@@ -32,17 +43,17 @@ while not gameExit:
 
 gameDisplay.fill(white)
 	#look up draw.rect()
-	pygame.draw.rect(gameDisplay, black, [400,300, 10, 100])
-	pygame.draw.rect(gameDisplay, red, [100,100, 50, 50])
+pygame.draw.rect(gameDisplay, black, [400,300, 10, 100])
+pygame.draw.rect(gameDisplay, red, [100,100, 50, 50])
 
-	gameDisplay.fill(blue, rect=[200,200, 20,20])
+gameDisplay.fill(blue, rect=[200,200, 20,20])
 
 
-	gameDisplay.fill(blue, rect=[50,50, 20,20])
-	pygame.draw.circle(gameDisplay, red, (50,100), 20, 0)
-	pygame.draw.lines(gameDisplay, red, False, [(100,100), (150,200), (200,100)], 1)
+gameDisplay.fill(blue, rect=[50,50, 20,20])
+pygame.draw.circle(gameDisplay, red, (50,100), 20, 0)
+pygame.draw.lines(gameDisplay, red, False, [(100,100), (150,200), (200,100)], 1)
 
-	pygame.display.update()		
+pygame.display.update()		
 #required
 pygame.quit()
 quit()	
