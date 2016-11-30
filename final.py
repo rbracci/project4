@@ -24,7 +24,7 @@ pygame.display.set_caption("Breakout Game by Robert Bracci")
 
 
 
-class Block(pygame.sprite.Sprite):
+class Paddle(pygame.sprite.Sprite):
 	def __init__(self):
 		super().__init__()
 		self.image = pygame.Surface([block_width,block_height])
@@ -74,8 +74,8 @@ class Ball (pygame.sprite.Sprite):
 clock = pygame.time.Clock()
 		
 allsprites = pygame.sprite.Group()
-block = Block()
-allsprites.add(block)
+paddle = Paddle()
+allsprites.add(paddle)
 ball = Ball()
 allsprites.add(ball)
 # Bricks= BRICKS()

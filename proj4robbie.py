@@ -4,7 +4,7 @@ pygame.init();
 class Block(pygame.sprite.Sprite):
 
 class Ball(pygame.sprite.Sprite):
-
+##
 def main():
     ball_img = pyglet.resource.image('ball.png')
     paddle_imgs = [pyglet.resource.image('paddle1.png'),
