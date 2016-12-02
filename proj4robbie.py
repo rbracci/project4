@@ -2,6 +2,7 @@ import pygame
 pygame.init();
 #alsdfj
 class Block(pygame.sprite.Sprite):
+    ##
 
 class Ball(pygame.sprite.Sprite):
 ##
