@@ -223,14 +223,14 @@ while not gameExit:
 			if pacman.rect.colliderect(new_hit):
 				print("hit")
 
-		if pacman.rect.colliderect(bomb):
-			print(pacman.rect.x, pacman.rect.y, bomb.rect.x, bomb.rect.y)
-			print("gameover")
-			game_over = True
+		# if pacman.rect.colliderect(bomb):
+		# 	print(pacman.rect.x, pacman.rect.y, bomb.rect.x, bomb.rect.y)
+		# 	print("gameover")
+		# 	game_over = True
 
-		if game_over == True:
-			print("Terminated")
-			score.gameover(screen)
+		# if game_over == True:
+		# 	print("Terminated")
+		# 	score.gameover(screen)
 		
 
 	if event.type == pygame.KEYDOWN:
@@ -272,7 +272,12 @@ while not gameExit:
 	sprites.update()
 	# score.draw(screen)
 	sprites.draw(screen)
-	#add in quit
+
 	display.update()
 pygame.quit()
 quit()
+
+
+
+
+
